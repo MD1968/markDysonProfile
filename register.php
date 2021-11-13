@@ -1,6 +1,6 @@
 <?php
 // Include config file
-require_once "config.php";
+require_once "includes/config.php";
  
 // Define variables and initialize with empty values
 $username = $password = $confirm_password = "";
@@ -94,10 +94,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     mysqli_close($link);
 }
 ?>
- 
-<!DOCTYPE html>
+
 <?php include "includes/templates/header.php"; ?>
+
 <?php include "includes/templates/navbar.php"; ?>
+
 <body>
     <div class="wrapper">
         <h2>Sign Up</h2>
@@ -124,5 +125,4 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             </div>
             <p>Already have an account? <a href="login.php">Login here</a>.</p>
         </form>
-    </div>
-<?php include "includes/templates/foote.php"; ?>
+<?php include "includes/templates/footer.php"; ?>
